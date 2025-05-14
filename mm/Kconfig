@@ -821,6 +821,7 @@ config ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT
 config SPECULATIVE_PAGE_FAULT
        bool "Speculative page faults"
        default y
+       depends on !PREEMPT_RT_FULL
        depends on ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT
        depends on MMU && SMP
        help
