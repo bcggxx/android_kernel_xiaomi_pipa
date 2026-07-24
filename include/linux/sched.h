@@ -1548,6 +1548,10 @@ struct task_struct {
 		bool free_stack;
 	} async_free;
 
+#ifdef CONFIG_MILLET
+	int millet_freeze_flag;
+#endif
+
 	/*
 	 * New fields for task_struct should be added above here, so that
 	 * they are included in the randomized portion of task_struct.
